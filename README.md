@@ -1,2 +1,2 @@
 # AdventOfCode
-My Java solutions for Advent of Code.
+Java solutions for Advent of Code.
