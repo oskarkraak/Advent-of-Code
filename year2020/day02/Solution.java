@@ -98,5 +98,5 @@ public class Solution {
     System.out.println("There are " + valid + " valid passwords.");
   }
 
-} // end of class Solution
+}
 
