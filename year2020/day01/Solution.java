@@ -5,10 +5,7 @@ public class Solution {
   
   public static void main(String[] args) {
     String[] input = Reader.readFile("./AdventOfCode/year2020/day01/input.txt");
-    int[] numbers = new int[input.length];
-    for (int i = 0; i < input.length; i++) {
-      numbers[i] = Integer.parseInt(input[i]);
-    }
+    int[] numbers = Reader.parseIntArray(input);
     
     part1(numbers);
     part2(numbers);
