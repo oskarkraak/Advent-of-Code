@@ -26,6 +26,14 @@ public class Reader {
     }
     
   }
+  
+  public static int[] parseIntArray(String[] input) {
+    int[] numbers = new int[input.length];
+    for (int i = 0; i < input.length; i++) {
+      numbers[i] = Integer.parseInt(input[i]);
+    }
+    return numbers;
+  }
 
 }
 
