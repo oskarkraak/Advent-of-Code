@@ -1,3 +1,5 @@
+// This file only contains part 1. Have a look at Part_2.txt for an explaination.
+
 package AdventOfCode.year2020.day10;
 import AdventOfCode.Reader;
 
@@ -10,7 +12,6 @@ public class Solution {
     int[] numbers = Reader.parseIntArray(input);
     
     part1(numbers);
-    part2(input);
   }
   
   static void part1(int[] input) {
@@ -36,12 +37,6 @@ public class Solution {
     System.out.println("Part one:");
     System.out.println(dif1 + " differences of 1 jolt * " + dif3 + " differences of 3 jolts =");
     System.out.println(dif1 * dif3);
-  }
-  
-  static void part2(String[] input) {
-    
-    
-    System.out.println("Part two:");
   }
 
 }
