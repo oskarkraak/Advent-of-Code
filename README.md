@@ -2,8 +2,8 @@
 Solutions for Advent of Code.
 
 # Languages
-2020: Java
-2021: Java
+- 2020: Java
+- 2021: Java
 
 # Summaries
 I'm planning on also explaining and summarizing my solutions for the 2022 calendar.
