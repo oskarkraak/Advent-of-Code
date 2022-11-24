@@ -1,5 +1,3 @@
-// This file only contains part 1. Have a look at Part_2.txt for an explaination.
-
 package AdventOfCode.year2020.day10;
 
 import AdventOfCode.year2020.Reader;
@@ -13,6 +11,7 @@ public class Solution {
         int[] numbers = Reader.parseIntArray(input);
 
         part1(numbers);
+        part2(numbers);
     }
 
     static void part1(int[] input) {
@@ -38,6 +37,28 @@ public class Solution {
         System.out.println("Part one:");
         System.out.println(dif1 + " differences of 1 jolt * " + dif3 + " differences of 3 jolts =");
         System.out.println(dif1 * dif3);
+    }
+
+    static void part2(int[] input) {
+        Arrays.sort(input);
+        // We only need to cache the last 3 results
+        int[] adapters = new int[3];
+        long[] combinations = new long[3];
+        // Initialize last indices so that they get deleted last
+        adapters[2] = input[0];
+        combinations[2] = 1L;
+        for (int i = 0; i < input.length; i++) {
+            // Add combinations of previous 3
+            long sum = 0;
+            for (int j = 0; j < 3; j++)
+                if (input[i] - adapters[j] <= 3)
+                    sum += combinations[j];
+            adapters[i % 3] = input[i];
+            combinations[i % 3] = sum;
+        }
+
+        System.out.println("Part two:");
+        System.out.println(combinations[(input.length - 1) % 3]);
     }
 
 }

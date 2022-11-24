@@ -1,3 +1,0 @@
-I really had trouble solving part 2 and in the end, I ran out of ideas.
-I've seen a few solutions using some sorts of programming tricks. However, none of them were using maths.
-If you know a way to solve this mathematically, let me know!
