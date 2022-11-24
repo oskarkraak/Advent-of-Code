@@ -5,7 +5,7 @@ import AdventOfCode.year2020.Reader;
 public class Solution {
 
     public static void main(String[] args) {
-        String[] input = Reader.readFile("./AdventOfCode/year2020/day11/input.txt");
+        String[] input = Reader.readFile("./year2020/day11/input.txt");
         // Transform input into char grid
         // 2 of them so part 2 does not work with the edited input
         char[][] grid1 = new char[input.length][input[0].length()]; // [grid height] [grid width]

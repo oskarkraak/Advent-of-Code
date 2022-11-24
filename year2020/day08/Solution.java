@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Solution {
 
     public static void main(String[] args) {
-        String[] input = Reader.readFile("./AdventOfCode/year2020/day08/input.txt");
+        String[] input = Reader.readFile("./year2020/day08/input.txt");
         System.out.println("The value in the accumulator immediately before any instruction is executed a second time is: " + part1(input));
         part2(input);
     }

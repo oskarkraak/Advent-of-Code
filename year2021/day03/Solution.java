@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class Solution {
 
     public static void main(String[] args) {
-        String[] input = Reader.readFile("./AdventOfCode/year2021/day03/input.txt");
+        String[] input = Reader.readFile("./year2021/day03/input.txt");
         part1(input);
         part2(input);
     }

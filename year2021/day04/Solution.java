@@ -5,7 +5,7 @@ import AdventOfCode.year2021.Reader;
 public class Solution {
 
     public static void main(String[] args) {
-        String[] input = Reader.readFile("./AdventOfCode/year2021/day04/input.txt");
+        String[] input = Reader.readFile("./year2021/day04/input.txt");
 
         // Convert input
 

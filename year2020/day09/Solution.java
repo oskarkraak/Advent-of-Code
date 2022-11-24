@@ -8,7 +8,7 @@ import java.util.Collections;
 public class Solution {
 
     public static void main(String[] args) {
-        String[] input = Reader.readFile("./AdventOfCode/year2020/day09/input.txt");
+        String[] input = Reader.readFile("./year2020/day09/input.txt");
         long l = part1(input);
         part2(input, l);
     }

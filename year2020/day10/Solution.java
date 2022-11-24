@@ -9,7 +9,7 @@ import java.util.Arrays;
 public class Solution {
 
     public static void main(String[] args) {
-        String[] input = Reader.readFile("./AdventOfCode/year2020/day10/input.txt");
+        String[] input = Reader.readFile("./year2020/day10/input.txt");
         int[] numbers = Reader.parseIntArray(input);
 
         part1(numbers);
