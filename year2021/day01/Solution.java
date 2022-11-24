@@ -1,6 +1,6 @@
 package AdventOfCode.year2021.day01;
 
-import AdventOfCode.Reader;
+import AdventOfCode.year2021.Reader;
 
 public class Solution {
 

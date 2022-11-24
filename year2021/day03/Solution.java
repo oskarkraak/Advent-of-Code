@@ -1,6 +1,6 @@
 package AdventOfCode.year2021.day03;
 
-import AdventOfCode.Reader;
+import AdventOfCode.year2021.Reader;
 
 import java.util.ArrayList;
 

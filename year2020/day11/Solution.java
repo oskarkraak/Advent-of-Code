@@ -1,8 +1,6 @@
 package AdventOfCode.year2020.day11;
 
-import AdventOfCode.Reader;
-
-import java.util.Arrays;
+import AdventOfCode.year2020.Reader;
 
 public class Solution {
 
