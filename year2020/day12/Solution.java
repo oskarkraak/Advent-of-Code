@@ -23,25 +23,35 @@ public class Solution {
             // Get direction
             int dirX = 0, dirY = 0;
             switch (action) {
-                case 'N' -> dirY = 1;
-                case 'S' -> dirY = -1;
-                case 'E' -> dirX = 1;
-                case 'W' -> dirX = -1;
-                case 'L' -> {
+                case 'N':
+                    dirY = 1;
+                    break;
+                case 'S':
+                    dirY = -1;
+                    break;
+                case 'E':
+                    dirX = 1;
+                    break;
+                case 'W':
+                    dirX = -1;
+                    break;
+                case 'L':
                     direction += amt / 90;
                     while (direction > 3)
                         direction -= 4;
-                }
-                case 'R' -> {
+                    break;
+                case 'R':
                     direction -= amt / 90;
                     while (direction < 0)
                         direction += 4;
-                }
-                case 'F' -> {
+                    break;
+                case 'F':
                     dirX = directions[direction][0];
                     dirY = directions[direction][1];
-                }
-                default -> System.out.println("Error: Invalid action");
+                    break;
+                default:
+                    System.out.println("Error: Invalid action");
+                    break;
             }
             // Move
             x += dirX * amt;
@@ -74,11 +84,19 @@ public class Solution {
             char action = input[i].charAt(0);
             int amt = Integer.parseInt(input[i].substring(1));
             switch (action) {
-                case 'N' -> wy += amt;
-                case 'S' -> wy -= amt;
-                case 'E' -> wx += amt;
-                case 'W' -> wx -= amt;
-                case 'L' -> {
+                case 'N':
+                    wy += amt;
+                    break;
+                case 'S':
+                    wy -= amt;
+                    break;
+                case 'E':
+                    wx += amt;
+                    break;
+                case 'W':
+                    wx -= amt;
+                    break;
+                case 'L':
                     quadrant += amt / 90;
                     while (quadrant > 3)
                         quadrant -= 4;
@@ -89,8 +107,8 @@ public class Solution {
                     }
                     wx = Math.abs(wx) * quadrants[quadrant][0];
                     wy = Math.abs(wy) * quadrants[quadrant][1];
-                }
-                case 'R' -> {
+                    break;
+                case 'R':
                     quadrant -= amt / 90;
                     while (quadrant < 0)
                         quadrant += 4;
@@ -101,12 +119,14 @@ public class Solution {
                     }
                     wx = Math.abs(wx) * quadrants[quadrant][0];
                     wy = Math.abs(wy) * quadrants[quadrant][1];
-                }
-                case 'F' -> {
+                    break;
+                case 'F':
                     sx += wx * amt;
                     sy += wy * amt;
-                }
-                default -> System.out.println("Error: Invalid action");
+                    break;
+                default:
+                    System.out.println("Error: Invalid action");
+                    break;
             }
         }
         System.out.println("Part 2: " + (Math.abs(sx) + Math.abs(sy)));
