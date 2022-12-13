@@ -1,11 +1,30 @@
 def part1():
+    packets = []
+    for line in file:
+        packets.append(line.strip())
     sum_of_pairs_in_right_order = 0
-    for i in range(0, len(file), 3):
-        packet1 = file[i]
-        packet2 = file[i + 1]
+    for i in range(0, len(packets), 3):
+        packet1 = packets[i]
+        packet2 = packets[i + 1]
         if is_pair_in_right_order(packet1, packet2):
             sum_of_pairs_in_right_order += int(i / 3) + 1
     print("Part 1:", sum_of_pairs_in_right_order)
+
+
+def part2():
+    divider_packets = ["[[2]]", "[[6]]"]
+    packets = []
+    for packet in divider_packets:
+        packets.append(packet)
+    for line in file:
+        if line.strip() != "":
+            packets.append(line.strip())
+    bubble_sort(packets, is_pair_in_right_order)
+    decoder_key = 1
+    for i in range(len(packets)):
+        if packets[i] in divider_packets:
+            decoder_key *= i + 1
+    print("Part 2:", decoder_key)
 
 
 def is_pair_in_right_order(left: str, right: str) -> bool or None:
@@ -81,7 +100,15 @@ def substring(values: list[str], opening_bracket_index: int, closing_bracket_ind
     return result.strip(",")
 
 
+def bubble_sort(packets: list[str], is_lower):
+    for i in range(0, len(packets) - 1):
+        for j in range(0, len(packets) - i - 1):
+            if is_lower(packets[j + 1], packets[j]):
+                temp = packets[j]
+                packets[j] = packets[j + 1]
+                packets[j + 1] = temp
+
+
 file = open("input.txt").readlines()
-for i in range(len(file)):
-    file[i] = file[i].strip()
 part1()
+part2()
