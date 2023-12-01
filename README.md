@@ -5,3 +5,4 @@ Solutions for Advent of Code.
 - 2020: Java
 - 2021: Java
 - 2022: Python
+- 2023: C++
