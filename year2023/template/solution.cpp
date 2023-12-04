@@ -24,6 +24,19 @@ ostream &operator<<(ostream &os, const vector<S> &vector) {
   return os;
 }
 
+vector<string> split(string s, string delimiter) {
+  vector<string> result;
+  size_t start = 0;
+  size_t end = s.find(delimiter);
+  while (end != string::npos) {
+    result.push_back(s.substr(start, end - start));
+    start = end + delimiter.length();
+    end = s.find(delimiter, start);
+  }
+  result.push_back(s.substr(start)); // Add the last token
+  return result;
+}
+
 void part1(vector<string> input) {
   int result = 0;
   cout << "Part 1: " << result << endl;
